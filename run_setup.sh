@@ -136,7 +136,7 @@ brew install zsh-syntax-highlighting
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
 #mv ZSH FILE to ~/.zshrc
-mv .zshrc ~/.zshrc
+cp .zshrc ~/.zshrc
 
 # create bash profile file
 touch ~/.bash_profile
