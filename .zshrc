@@ -15,7 +15,7 @@ export ZSH=$HOME.oh-my-zsh
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # source the oh my souch and bash profile
-source $ZSH/oh-my-zsh.sh
+source ~/.oh-my-zsh/oh-my-zsh.sh
 source ~/.bash_profile
 
 plugins=(
