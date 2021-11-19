@@ -14,6 +14,7 @@
 
 # ----- Code setup -----
 brew install --cask python3
+brew install jupyter
 brew install --cask vim
 brew install --cask htop
 brew install --cask wget
@@ -91,6 +92,8 @@ sudo nvram SystemAudioVolume=” “
 # 
 # Use this command to figure out the UTI of a file ( source https://github.com/Lord-Kamina/SwiftDefaultApps)
 # mdls -name kMDItemContentType -name kMDItemContentTypeTree -name kMDItemKind test.py
+#
+# using duti (https://github.com/moretension/duti) to det defualt apps
 
 brew install duti
 duti -s com.microsoft.VSCode public.python-script all
@@ -101,10 +104,6 @@ duti -s com.microsoft.VSCode public.plain-text all
 duti -s com.microsoft.VSCode public.comma-separated-values-text all
 duti -s com.microsoft.VSCode net.daringfireball.markdown all
 duti -s com.microsoft.VSCode public.shell-script all
-
-
-
-
 
 
 # ----- TERMINAL SETUP ----- 
@@ -129,10 +128,8 @@ brew install zsh-syntax-highlighting
 # https://github.com/romkatv/powerlevel10k#oh-my-zsh
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
-
 #mv ZSH FILE to ~/.zshrc
 mv .zshrc ~/.zshrc
-
 
 # run p10k configuration
 p10k configure
