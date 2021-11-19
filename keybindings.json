@@ -1,0 +1,8 @@
+[
+    {
+         "key": "cmd+3",
+         "command": "editor.action.commentLine",
+         "when": "editorTextFocus && !editorReadonly"
+     },
+
+]
