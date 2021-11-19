@@ -138,5 +138,11 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 #mv ZSH FILE to ~/.zshrc
 mv .zshrc ~/.zshrc
 
+# create bash profile file
+touch ~/.bash_profile
+
+# source the ~/.zshrc
+source ~/.zshrc
+
 # run p10k configuration
 p10k configure
