@@ -8,8 +8,10 @@
 #       https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789
 
 
+
 # ----- Install brew -----
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
 
 
 # ----- Code setup -----
@@ -20,8 +22,10 @@ brew install --cask htop
 brew install --cask wget
 
 
+
 # ---- Browser setup -----
 brew install --cask firefox
+
 
 
 # ---- Misc Apps setup ----
@@ -29,10 +33,13 @@ brew install --cask slack
 brew install --cask spotify
 
 
-# ---- Wallpaper Setup
+
+# ---- Wallpaper Setup -----
 cp $(pwd)/wallpaper.jpg $HOME/Pictures/wallpaper.jpg
 # regarding relative paths in osascript: https://stackoverflow.com/questions/24152552/relative-file-paths-with-applescript
 osascript -e 'tell application "Finder" to set desktop picture to (POSIX path of (path to home folder)) & "Pictures/wallpaper.jpg" as POSIX file'
+
+
 
 
 # ------- EDITOR SETUP ------
@@ -59,7 +66,6 @@ cp keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
 # install kite for auto-completion
 brew install --cask kite
 code --install-extension kiteco.kite
-
 
 
 
