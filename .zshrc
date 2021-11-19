@@ -46,4 +46,8 @@ export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+
+# highlight stuff
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
                                                                                                                                                                 13,8          Top
