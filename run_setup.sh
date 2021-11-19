@@ -15,11 +15,11 @@
 
 
 # ----- Code setup -----
-brew install --cask python3
+brew install python3
 brew install jupyter
-brew install --cask vim
-brew install --cask htop
-brew install --cask wget
+brew install vim
+brew install htop
+brew install wget
 
 
 
@@ -81,6 +81,7 @@ chflags nohidden ~/Library/
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock tilesize -integer 25
+defaults write com.apple.dock orientation left
 killall Dock
 
 # create a screenshot folder
