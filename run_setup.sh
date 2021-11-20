@@ -126,7 +126,7 @@ brew install zsh
 # guides:
 #           https://0n3z3r0n3.medium.com/oh-my-zsh-configuration-guide-for-macos-terminal-3ee6003b09d5
 #
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 #### install zsh-completions and zsh-syntax-highlighting 
 brew install zsh-syntax-highlighting
