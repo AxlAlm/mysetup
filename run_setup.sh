@@ -121,15 +121,12 @@ brew install --cask iterm2
 #  install Zsh
 brew install zsh
 
-# install Oh-My-Zsh
+## install Oh-My-Zsh
 #
 # guides:
 #           https://0n3z3r0n3.medium.com/oh-my-zsh-configuration-guide-for-macos-terminal-3ee6003b09d5
 #
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-
-#### install zsh-completions and zsh-syntax-highlighting 
-brew install zsh-syntax-highlighting
 
 # install pwerlevel10k theme
 # https://github.com/romkatv/powerlevel10k#oh-my-zsh
@@ -138,11 +135,11 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 #mv ZSH FILE to ~/.zshrc
 cp .zshrc ~/.zshrc
 
-# create bash profile file
-touch ~/.bash_profile
-
 # source the ~/.zshrc
-source ~/.zshrc
+zsh ~/.zshrc
 
-# run p10k configuration
-p10k configure
+# kill iterm, when opened again will ask for setup
+killall iTerm2
+
+# open iterm2
+open -a iTerm
