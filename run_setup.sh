@@ -19,22 +19,17 @@
 
 # ----- Code setup -----
 brew install python3
+pip install --user pipenv
+brew install pyenv-virtualenv
+brew install --cask anaconda
 brew install jupyter
 brew install vim
 brew install htop
 brew install wget
-brew install pyenv-virtualenv
+
+
 brew install jenkins
 brew install ansible
-
-
-# used for as a part of a fix for pyenv issue installing python version
-# on Macs
-# https://github.com/pyenv/pyenv/issues/1740
-# also see aliases for function for command used to install
-# new python versions
-brew reinstall zlib bzip2
-
 
 
 # ---- DB setup -----
@@ -137,6 +132,7 @@ duti -s com.microsoft.VSCode public.shell-script all
 # set up bash profile and aliases
 cp .alias ~/.alias
 cp .bash_profile ~/.bash_profile
+cp .bashrc ~/.bashrc
 source ~/.bash_profile
 
 # install iterm2

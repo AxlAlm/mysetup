@@ -1,4 +1,9 @@
 
+
+# little hacky alias to open python 3 when using python
+alias python=python3
+alias python2="command python"
+
 #  copy the contents for a file
 alias cf="pbcopy <"
 
@@ -33,7 +38,7 @@ alias gnb="git checkout -b"
 # the desired named of the environment
 # if only one argument is passed its assumed to be the desired named of the environemnt 
 # and the latest stable python environemnt will be used.
-function cv {
+function ce {
     
     # parsing arguments
     if (( $# > 1)); then
@@ -54,11 +59,11 @@ function cv {
 
     # # if we dont find a version we install the version
     if [ -z "$found_version" ]; then
-        # because some issues with mac OS and pyenv install x.x.x we use this workaround ( see issue here https://github.com/pyenv/pyenv/issues/1740)
-        CFLAGS="-I$(brew --prefix openssl)/include -I$(brew --prefix bzip2)/include -I$(brew --prefix readline)/include -I$(xcrun --show-sdk-path)/usr/include";
-        LDFLAGS="-L$(brew --prefix openssl)/lib -L$(brew --prefix readline)/lib -L$(brew --prefix zlib)/lib -L$(brew --prefix bzip2)/lib";
-        pyenv install --patch "$py_vers" < <(curl -sSL https://github.com/python/cpython/commit/8ea6353.patch\?full_index\=1);
+        pyenv install "$py_vers"
     fi
 
     pyenv virtualenv "$py_vers" "$env_name"
 }
+
+alias ae="pyenv activate"
+alias de="pyenv deactivate"

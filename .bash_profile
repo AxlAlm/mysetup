@@ -9,3 +9,6 @@
 if [ -f ~/.alias ]; then
     . ~/.alias
 fi
+
+# source bashrc
+source ~/.bashrc
