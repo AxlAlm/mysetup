@@ -1,0 +1,31 @@
+
+#  copy the contents for a file
+alias cf="pbcopy <"
+
+# cd commands
+alias ..="cd .."
+alias ....="cd ../../.."
+alias ...="cd ../.."
+
+# find file 
+alias f="find . |grep"
+
+# list processes
+alias listp="ps -aef | grep"
+
+# untar
+alias untar="tar -zxvf "
+
+# size of all directories
+alias dz="du -sh *"
+
+# find command in history
+alias gh='history|grep'
+
+# git
+alias ga="git add .; git status"
+alias gc='git commit -m'
+alias gnb='git checkout -b'
+
+#alias ve='python3 -m venv ./venv'
+#alias va='source ./venv/bin/activate'

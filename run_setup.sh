@@ -6,13 +6,16 @@
 # help guides:
 #       https://edaoud.com/blog/2020/02/01/automate-your-computer-setup-dotfiles/
 #       https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789
-
-
+#
+# first run xcode-select --install to be able to use git
 
 # ----- Install brew -----
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 
+
+#git config --global user.email "axel@almquist.io"
+#git config --global user.email "Axel Almquist"
 
 # ----- Code setup -----
 brew install python3
@@ -21,6 +24,13 @@ brew install vim
 brew install htop
 brew install wget
 
+brew install jenkins
+brew install ansible
+
+
+# ---- DB setup -----
+brew install mysql
+brew install --cask mysqlworkbench
 
 
 # ---- Browser setup -----
@@ -115,11 +125,22 @@ duti -s com.microsoft.VSCode public.shell-script all
 
 # ----- TERMINAL SETUP ----- 
 
+# set up bash profile and aliases
+cp .alias ~/.alias
+cp .bash_profile ~/.bash_profile
+source ~/.bash_profile
+
 # install iterm2
 brew install --cask iterm2
 
+# color theme
+git clone https://github.com/mbadolato/iTerm2-Color-Schemes.git /tmp/iTerm2-Color-Schemes
+/tmp/iTerm2-Color-Schemes/tools/import-scheme.sh 'AlienBlood'    
+
+
 #  install Zsh
 brew install zsh
+
 
 ## install Oh-My-Zsh
 #
