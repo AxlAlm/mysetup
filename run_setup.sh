@@ -23,9 +23,18 @@ brew install jupyter
 brew install vim
 brew install htop
 brew install wget
-
+brew install pyenv-virtualenv
 brew install jenkins
 brew install ansible
+
+
+# used for as a part of a fix for pyenv issue installing python version
+# on Macs
+# https://github.com/pyenv/pyenv/issues/1740
+# also see aliases for function for command used to install
+# new python versions
+brew reinstall zlib bzip2
+
 
 
 # ---- DB setup -----
