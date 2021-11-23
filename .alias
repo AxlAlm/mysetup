@@ -38,9 +38,9 @@ alias dz="du -sh *"
 alias gh="history|grep"
 
 # git
-alias ga="git add .; git status"
-alias gc="git commit -m"
-alias gnb="git checkout -b"
+#alias ga='git add .;git status'
+#alias gc='git commit -m'
+#alias gnb='git checkout -b'
 
 
 # --- Alias for create pyenv + virtual environments
