@@ -38,6 +38,7 @@ alias dz="du -sh *"
 alias gh="history|grep"
 
 # git
+# USE THESE INSTEAD https://giuliachiola.dev/posts/oh-my-zsh-git-plugin-cheatsheet/
 #alias ga='git add .;git status'
 #alias gc='git commit -m'
 #alias gnb='git checkout -b'
