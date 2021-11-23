@@ -1,8 +1,19 @@
 
 
-# little hacky alias to open python 3 when using python
+#  copy the contents for a file
+alias c="clear"
+
+# quit and quit+restart
+alias q="killall iTerm2"
+alias qr="killall iTerm2;open -a iTerm"
+
+
+# little hacky alias to set the default python to python 3
+# as well as pip to pip3
 alias python=python3
 alias python2="command python"
+alias pip=pip3
+
 
 #  copy the contents for a file
 alias cf="pbcopy <"
@@ -33,12 +44,19 @@ alias gc="git commit -m"
 alias gnb="git checkout -b"
 
 
+# --- Alias for create pyenv + virtual environments
+
 # function to create a new environment using pyenv and virtualenv
 # will assume that if given 2 arguments the first is the python version and the second argument 
 # the desired named of the environment
 # if only one argument is passed its assumed to be the desired named of the environemnt 
 # and the latest stable python environemnt will be used.
-function ce {
+## TODO MAYBE Include the following commnads:
+#
+#       pip install --upgrade pip; pip install -r requirments.txt
+#
+# NOTE! will default to the lastes python version 3.9+, will not take 3.10
+function cpvenv {
     
     # parsing arguments
     if (( $# > 1)); then
@@ -51,7 +69,9 @@ function ce {
 
     # if we do not pass python version we fetch the latest python version
     if [ -z "$py_vers" ]; then
-        py_vers=$(pyenv install --list | grep --extended-regexp "^\s*[0-9][0-9.]*[0-9]\s*$" | tail -1 | xargs)
+        py_vers=$(pyenv install --list | grep --extended-regexp "^\s*[2-3].[0-9.].[0-9]*$" | tail -1 | xargs)
+        echo "No python version was give so will use the latest version of python 3.9: $py_vers"
+
     fi        
 
     # look for the version in the installed python version
@@ -63,7 +83,18 @@ function ce {
     fi
 
     pyenv virtualenv "$py_vers" "$env_name"
+    pyenv activate "$env_name"
+    pip install --upgrade pip
+    pip install -r requirments.txt
 }
 
-alias ae="pyenv activate"
-alias de="pyenv deactivate"
+alias pva="pyenv activate"
+alias pvda="pyenv deactivate"
+alias pvdel="pyenv virtualenv-delete"
+
+
+# --- Alias for create conda  environments
+alias ccenv="conda env create -f environment.yml"
+alias ca="conda activate"
+alias cda="conda deactivate"
+alias cdel="conda env remove -n"

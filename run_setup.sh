@@ -13,21 +13,35 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 
-
 #git config --global user.email "axel@almquist.io"
 #git config --global user.email "Axel Almquist"
 
 # ----- Code setup -----
 brew install python3
-pip install --user pipenv
+
+# if want to use pyenv + virtualenv
+# problems is that it not that clean to use, and lack some features
+# like e.g. update python version
+brew install pyenv
+brew install virtualenv
 brew install pyenv-virtualenv
+
+# poetry, cleaner than using the above solution and have features for bulding and uploading packages
+# which is very nice. However, it lack som features such as update python version
+# https://python-poetry.org/
+"$(curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -)"
+
+# Another evironemnt solution. Anaconda is a large suit but is imo cleaner and allows e.g. changing 
+# of python versions, which is nice :D
 brew install --cask anaconda
-brew install jupyter
+
+
+# other
 brew install vim
 brew install htop
 brew install wget
 
-
+brew install jupyter
 brew install jenkins
 brew install ansible
 
@@ -72,6 +86,7 @@ code --install-extension vscode-icons-team.vscode-icons
 code --install-extension njpwerner.autodocstring
 code --install-extension redhat.vscode-yaml
 code --install-extension ionutvmi.path-autocomplete
+code --install-extension bungcip.better-toml
 
 # copying over settings and keybindings
 cp settings.json ~/Library/Application\ Support/Code/User/settings.json
@@ -154,6 +169,11 @@ brew install zsh
 #
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
+# installing some plugins for oh-my-zsh
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+
+
 # install pwerlevel10k theme
 # https://github.com/romkatv/powerlevel10k#oh-my-zsh
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
@@ -161,11 +181,13 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 #mv ZSH FILE to ~/.zshrc
 cp .zshrc ~/.zshrc
 
+
+
 # source the ~/.zshrc
-zsh ~/.zshrc
+#zsh ~/.zshrc
 
 # kill iterm, when opened again will ask for setup
-killall iTerm2
+#killall iTerm2
 
 # open iterm2
-open -a iTerm
+#open -a iTerm
