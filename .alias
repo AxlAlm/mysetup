@@ -14,7 +14,6 @@ alias python=python3
 alias python2="command python"
 alias pip=pip3
 
-
 #  copy the contents for a file
 alias cf="pbcopy <"
 
