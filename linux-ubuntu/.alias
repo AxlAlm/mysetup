@@ -2,19 +2,10 @@
 
 #  copy the contents for a file
 alias c="clear"
-alias sb="source ~/.bashrc"
+alias s="source ~/.zshrc"
 
 # always show hidden file
 alias ls="ls -a"
-
-# little hacky alias to set the default python to python 3
-# # as well as pip to pip3
-# alias python=python3
-# alias python2="command python"
-# alias pip=pip3
-
-#  copy the contents for a file
-alias cf="pbcopy <"
 
 # cd commands
 alias ..="cd .."
@@ -96,7 +87,7 @@ alias pvdel="pyenv virtualenv-delete"
 
 
 # --- Alias for create conda  environments
-alias ccenv="conda env create -f environment.yml"
-alias ca="conda activate"
-alias cda="conda deactivate"
-alias cdel="conda env remove -n"
+# alias ccenv="conda env create -f environment.yml"
+# alias ca="conda activate"
+# alias cda="conda deactivate"
+# alias cdel="conda env remove -n"
