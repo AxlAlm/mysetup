@@ -22,6 +22,7 @@ code --install-extension njpwerner.autodocstring
 code --install-extension redhat.vscode-yaml
 code --install-extension ionutvmi.path-autocomplete
 code --install-extension bungcip.better-toml
+code --install-extension kiteco.kite
 
 # copying over settings and keybindings
 cp settings.json ~/.config/Code/User/settings.json

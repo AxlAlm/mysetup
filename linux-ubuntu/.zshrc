@@ -12,7 +12,7 @@ fi
 export ZSH=$HOME/.oh-my-zsh
 
 # theme folder
-ZSH_THEME="jonathan" # fino
+ZSH_THEME="fino" # fino
 
 
 # Which plugins would you like to load?
@@ -30,6 +30,7 @@ plugins=(
     copybuffer
     dirhistory
     jsontools
+    #poetry
 	)
 
 source $ZSH/oh-my-zsh.sh
@@ -40,3 +41,4 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1'
