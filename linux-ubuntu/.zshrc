@@ -11,8 +11,9 @@ fi
 # Path to your oh-my-bash installation.
 export ZSH=$HOME/.oh-my-zsh
 
+
 # theme folder
-ZSH_THEME="fino" # fino
+ZSH_THEME="fino" # fino, nebirhos
 
 
 # Which plugins would you like to load?
@@ -41,4 +42,4 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1'
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
