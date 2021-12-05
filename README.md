@@ -1,2 +1,2 @@
 # mysetup
-script to setup iOS, IED etc ...
+script to setup OS
